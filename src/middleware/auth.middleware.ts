@@ -7,7 +7,8 @@ import { verifyToken } from '../utils/jwt';
 
 const authMiddleware = async (req: Request, res: Response, next: NextFunction) => {
 	const { cookies } = req;
-	try { 
+	console.log(cookies);
+	try {
 		if (cookies && cookies.Authentication) {
 			const {
 				user: { _id: id },
